@@ -38,7 +38,7 @@ class MaxHeap:
     
     def __bubbleDown(self, index):
         left = index * 2
-        right = index * 2 +1
+        right = index * 2 + 1
         largest = index
         if len(self.heap) > left and self.heap[largest]:
             largest = left
