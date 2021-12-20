@@ -26,3 +26,5 @@ print(my_stack)
 print(my_stack.peek())
 
 print(my_stack.is_empty())
+
+print(my_stack.size())
