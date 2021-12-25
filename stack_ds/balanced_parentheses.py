@@ -7,13 +7,15 @@ def par_check(symbol_string):
 
     while index < len(symbol_string) and balanced:
         symbol = symbol_string[index]
-        if symbol in "({[":
+        if symbol in "{[(":
             stack.push(symbol)
         else:
             if stack.is_empty():
                 balanced = False
             else:
-                stack.pop()
+                top = stack.pop()
+                if not matches(top, symbol):
+                    balanced = False
         index += 1
 
     if balanced and stack.is_empty():
@@ -21,5 +23,12 @@ def par_check(symbol_string):
     else:
         return False
 
-print(par_check("(()())"))
+def matches(open, close):
+    opens = "{[("
+    closes = "}])"
+    return opens.index(open) == closes.index(close)
+
+print(par_check(""))
+
+
 

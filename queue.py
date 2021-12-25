@@ -1,9 +1,21 @@
-from collections import deque
+class Animal:
+    def __init__(self) -> None:
+        print("Animal Created")
+    
+    def move(self):
+        print("Animal moving")
 
-# Queue
+    def cry(self):
+        print("Animal crying")
 
-my_queue = deque()
-my_queue.append(5) # add item to the end
-my_queue.append(10) 
-print(my_queue)
-print(my_queue.popleft()) # pop item from the front
+
+class Dog(Animal):
+    def __init__(self) -> None:
+        print("Dog created")
+    
+    def move(self):
+        print("Dog moving")
+
+
+dog = Animal()
+dog.__name
