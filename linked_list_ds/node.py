@@ -14,7 +14,11 @@ class Node:
     
     def set_next(self, new_next):
         self.next = new_next
+    
+    def __str__(self):
+        return ( '( {} )'.format(self.data))
 
 if __name__ == '__main__':
     node = Node(89)
     print(node.get_data())
+    print(node)
