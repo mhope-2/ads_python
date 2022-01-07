@@ -32,3 +32,4 @@ class LinkedList:
 
     def remove():
         pass
+    
