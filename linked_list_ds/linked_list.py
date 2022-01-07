@@ -30,6 +30,5 @@ class LinkedList:
                 current = current.get_next()
         return found
 
-    
     def remove():
         pass
