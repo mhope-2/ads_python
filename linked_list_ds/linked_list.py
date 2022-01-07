@@ -3,8 +3,6 @@ from .node import Node
 class LinkedList:
     def __init__(self) -> None:
         self.head = None
-        # self.size = 0
-
     
     def is_empty(self):
         return self.head == None
@@ -13,7 +11,6 @@ class LinkedList:
       temp = Node(item)
       temp.set_next(self.head)
       self.head = temp
-    #   self.size += 1
 
     def size(self):
         current = self.head
@@ -22,6 +19,16 @@ class LinkedList:
             count += 1
             current = current.get_next() 
         
+    def search(self, item):
+        current = self.head
+        found = False
+
+        while current != None and not found:
+            if current.get_data() == item:
+                found = True
+            else:
+                current = current.get_next()
+        return found
 
     
     def remove():
