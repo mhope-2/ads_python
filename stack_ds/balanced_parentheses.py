@@ -14,7 +14,7 @@ def par_check(symbol_string):
                 balanced = False
             else:
                 top = stack.pop()
-                if not matches(top, symbol):
+                if not "{[(".index(top) == "}])".index(symbol):
                     balanced = False
         index += 1
 
@@ -22,11 +22,6 @@ def par_check(symbol_string):
         return True
     else:
         return False
-
-def matches(open, close):
-    opens = "{[("
-    closes = "}])"
-    return opens.index(open) == closes.index(close)
 
 print(par_check(""))
 
